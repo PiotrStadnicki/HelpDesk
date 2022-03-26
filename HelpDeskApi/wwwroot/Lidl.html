@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vimana</title>
+    <link rel="stylesheet" href="css/site.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+            
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo">Lidl</div>
+        </div>
+        <div class="nav"style="background-color:blue; color:yellow">
+            <ol>
+                <li><a href="#"> Menu główne</a></li>
+                <li >
+                    <a href="#"> Stanowisko kasowe </a>
+                    <ul>
+                        <li><a href="#">Problem z Drukarką fiskalna</a></li>
+                        <li><a href="#">Problem z Beetlem</a></li>
+                        <li><a href="#">Problem ze skanerowagą</a></li>
+                        <li><a href="#">Problem z PinPadem </a></li>
+                        <li><a href="#">Ekran klijenta </a></li>
+                        <li><a href="#">Kasa SCO KM</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#"> Problemy różne</a>
+                    <ul>
+                        <li><a href="#">Problem z słuchawkami</a></li>
+                        <li><a href="#">Problem z skanerami na sklepie</a></li>
+                        <li><a href="#">Zamowienie tonerów</a></li>
+                        <li><a href="#">Awaria KM</a></li>
+                        <li><a href="#">Problem inne</a></li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#"> Problemy z BO </a>
+                    <ul>
+                        <li><a href="#">Komputer się zawiesił</a></li>
+                        <li><a href="#">Problem z raportami</a></li>
+                        <li><a href="#">Komputer żąda hasła</a></li>
+                        <li><a href="#">Logowanie na kase</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"> Prośby techników </a>
+                    <ul>
+                        <li><a href="#">Zrzut danych z EJ</a></li>
+                        <li><a href="#">Zmiana ekranów</a></li>
+                        <li><a href="#">Ekspres nie działa</a></li>
+                        <li><a href="#">Reinstalacja kasy</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"> Budowa maszyn </a>
+                    <ul>
+                        <li><a href="#">MK2</a></li>
+                        <li><a href="#">MK4</a></li>
+                        <li><a href="#">Touch2</a></li>
+                        <li><a href="#">Marlow</a></li>
+
+                    </ul>
+                </li>
+              
+
+            </ol>
+
+
+
+
+        </div>
+        <div class="content"></div>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script>
+
+            $(document).ready(function () {
+                var NavY = $('.nav').offset().top;
+
+                var stickyNav = function () {
+                    var ScrollY = $(window).scrollTop();
+
+                    if (ScrollY > NavY) {
+                        $('.nav').addClass('sticky');
+                    } else {
+                        $('.nav').removeClass('sticky');
+                    }
+                };
+
+                stickyNav();
+
+                $(window).scroll(function () {
+                    stickyNav();
+                });
+            });
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+
+
+    </div>
+
+    </body>
+</html>
